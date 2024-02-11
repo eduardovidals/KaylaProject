@@ -1,0 +1,8 @@
+{
+  "include": [
+    "src/**/*",
+    "./.eslintrc.json",
+    "vite.config.ts",
+    "tailwind.config.js"
+  ]
+}

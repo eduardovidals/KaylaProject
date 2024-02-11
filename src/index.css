@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base
+:root {
+  --color-primary: 40 66 40;
+}
+
+@font-face {
+  font-family: 'ValentineCute';
+  src: local('ValentineCute'), url(./assets/fonts/ValentineCute.ttf) format('truetype');
+}
+
+html, body, #root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+}
