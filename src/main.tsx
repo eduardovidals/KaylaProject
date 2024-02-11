@@ -4,12 +4,17 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import Home from './views/Home';
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      index: true,
+      element: <Home />
+    }
+  ],
   {
-    path: '/',
-    element: <Home />
+    basename: '/Valentines'
   }
-]);
+);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

@@ -6,5 +6,6 @@ import eslint from 'vite-plugin-eslint';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react(), tsconfigPaths(), eslint()],
+  plugins: [react(), tsconfigPaths(), eslint()],
+  base: '/Valentines'
 });

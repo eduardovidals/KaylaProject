@@ -3,11 +3,26 @@ import './Home.css';
 import { useState } from 'react';
 import Images from 'utils/Images';
 
-const NoImages = [Images.youSure, Images.sadBear];
-const NoText = ['Are you sure?', 'Why not?'];
-const YesButtonHeights = ['auto', 100, 150, 200, 300, 500, 750, 1000];
+const NoImages = [
+  Images.youSure,
+  Images.pleaseCute,
+  Images.sadBear,
+  Images.sadCat,
+  Images.sadCrying,
+  Images.sadPerson,
+  Images.sadHamster
+];
+const NoText = [
+  'Are you sure? I am cute!',
+  'Pretty please?',
+  'Rejected? Time for some ice cream.',
+  "No love? Guess it's just me and my cat.",
+  'Harsh! My code is crying now.',
+  "Nope still? I'm in tears",
+  "I'm heartbroken."
+];
+const YesButtonHeights = [100, 150, 200, 300, 500, 750, 1000];
 const YesFontHeights = [
-  '1rem',
   '1.5rem',
   '2rem',
   '3rem',
@@ -20,8 +35,8 @@ const YesFontHeights = [
 function Home() {
   const [status, setStatus] = useState<'yes' | 'no' | null>(null);
   const [clickCount, setClickCount] = useState({
-    yes: 0,
-    no: 0
+    yes: -1,
+    no: -1
   });
 
   return (
@@ -46,7 +61,7 @@ function Home() {
             }
             className="h-[200px]"
           />
-          <p className="mb-[5px] mt-[10px] font-[ValentineCute] text-2xl tracking-wide">
+          <p className="mb-[5px] mt-[10px] text-center font-[ValentineCute] text-2xl tracking-wide">
             {
               NoText[
                 clickCount.no < NoText.length
@@ -61,7 +76,7 @@ function Home() {
         <>
           <img alt="Yes Love" src={Images.kaylaLove} className="h-[200px]" />
           <p className="mb-[20px] mt-[10px] font-[ValentineCute] text-2xl tracking-wide text-red-500">
-            Love you too!
+            I love you too!
           </p>
         </>
       )}
